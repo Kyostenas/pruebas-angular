@@ -1,0 +1,20 @@
+div {
+    transition: all 550ms ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: var(--alto-barra-superior);
+    width: 100%;
+    position: fixed;
+    float: top;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    text-align: right;
+    align-items: right;
+    overflow-x: hidden;
+    padding-top: 20px;
+    white-space: nowrap;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.397), transparent);
+    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(1.5px);
+    z-index: 9999999;
+}

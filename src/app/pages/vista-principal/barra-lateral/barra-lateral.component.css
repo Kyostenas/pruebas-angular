@@ -1,0 +1,36 @@
+@media screen and (max-height: 450px) {
+    div {
+        padding-top: 15px;
+        font-size: 18px;
+    }
+}
+
+div {
+    transition: all 550ms ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+    width: var(--ancho-barra-lateral);
+    position: fixed;
+    float: left;
+    z-index: 999999999999999999;
+    top: 0;
+    left: 0;
+    background-color: rgb(41, 41, 41);
+    overflow-x: hidden;
+    padding-top: 20px;
+    white-space: nowrap;
+}
+
+div a {
+    transition: all 900ms ease-out;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+div a:hover{
+    transition: all 250ms;
+    color: rgb(255, 217, 114);
+}

@@ -1,0 +1,42 @@
+<div class="marco-cuadros-irregulares">
+    <div class="base-cuadro-irregular recuadro-mediano" *ngFor="let clase of ['primario', 'secundario', 'correcto', 'error', 'advertencia', 'info']">
+        <button
+            class="botlab sm {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab md {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab lg {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab xl {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <p>
+            <span class="texto {{ clase }}">
+                ESTE ES UN EJEMPLO DE TEXTO PARA VER ESTE COLOR
+            </span>
+        </p>
+    </div>
+</div>
+
+
+
