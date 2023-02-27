@@ -1,6 +1,6 @@
-/* html, body {
-  overflow: hidden;
-} */
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 :root {
   --ancho-barra-lateral: 220px;
@@ -49,230 +49,388 @@
   }
   
   
-  .marco-cuadros-irregulares,
-  .marco-cuadros-irregulares app-tabla-generica  {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  
-    display: grid;
-    grid-template-columns: repeat(auto-fill, var(--ancho-recuadro));
-    grid-auto-rows: var(--incremento-fila);
-    justify-content: center;
-  }
-  .marco-cuadros-irregulares-personalizado,
-  .marco-cuadros-irregulares-personalizado app-tabla-generica {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  
-    display: grid;
-    grid-template-columns: repeat(auto-fill, var(--ancho-recuadro-personalizado));
-    grid-auto-rows: var(--incremento-fila-personalizado);
-    justify-content: center;
-  
-  }
-  .base-cuadro-irregular,
-  app-tabla-generica .base-cuadro-irregular  {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 5px 5px;
-    border-radius: var(--border-radius-recuadro);
-    background-color: rgb(255, 255, 255);
-    overflow: hidden;
-    word-wrap: break-word;
-    box-shadow: 7px 7px 16px rgba(138, 138, 138, 0.301);
-  }
-  .centrar-todo {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .centrar-verticalmente {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    display:flex;
-    align-items: center;
-  }
-  .recuadro-chico {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    grid-row-end: span var(--recuadro-chico);
-    grid-column-end: span var(--colspan);
-  }
-  .recuadro-mediano{
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    grid-row-end: span var(--recuadro-mediano);
-    grid-column-end: span var(--colspan);
-  }
-  .recuadro-grande {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    grid-row-end: span var(--recuadro-grande);
-    grid-column-end: span var(--colspan);
-  }
-  .recuadro-personalizado {
-    transition: 
-      grid-template-columns 350ms,
-      grid-auto-rows 350ms,
-      grid-row-end 350ms,
-      grid-column-end 350ms;
-    grid-row-end: span var(--recuadro-personalizado);
-    grid-column-end: span var(--colspan);
-  }
-  
-    
-  
-  @property --inicialLlenadoBotella {
-    syntax: '<color>';
-    initial-value: rgb(255, 255, 255);
-    inherits: false;
-  }
-  @property --finalLlenadoBotella {
-    syntax: '<color>';
-    initial-value: rgb(255, 255, 255);
-    inherits: false;
-  }
-  @property --porcentajeLlenadoBotella {
-    syntax: '<length-percentage>';
-    initial-value: 0%;
-    inherits: false;
-  }
-  @property --porcentajeLlenadoBotellaFinal {
-    syntax: '<length-percentage>';
-    initial-value: 0%;
-    inherits: false;
-  }
-  
-  .llenado-botella {
-    transition: 
-      --inicialLlenadoBotella 350ms ease-in-out, 
-      --finalLlenadoBotella 350ms ease-in-out,
-      --porcentajeLlenadoBotella 300ms ease-in-out,
-      --porcentajeLlenadoBotellaFinal 350ms ease-in-out;
-    background-image: linear-gradient(
-      to top,
-      var(--inicialLlenadoBotella) 
-        var(--porcentajeLlenadoBotella), 
-      var(--finalLlenadoBotella) 
-        var(--porcentajeLlenadoBotellaFinal)
-    );
-    --inicialLlenadoBotella: rgba(46, 144, 144, 0.288);
-    --finalLlenadoBotella: rgba(52, 114, 114, 0);
-    --porcentajeLlenadoBotella: var(--llenado, 0%);
-    --porcentajeLlenadoBotellaFinal: var(--llenado, 0%);
-  }
+.marco-cuadros-irregulares,
+.marco-cuadros-irregulares app-tabla-generica  {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
-  :root {
-    --color-enfasis-boton: gray;
-    --color-enfasis-texto-boton: black;
-    --color-enfasis-texto: black;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--ancho-recuadro));
+  grid-auto-rows: var(--incremento-fila);
+  justify-content: center;
+}
+.marco-cuadros-irregulares-personalizado,
+.marco-cuadros-irregulares-personalizado app-tabla-generica {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
-  /* (o-----------------------------------------( BOTONES Y TEXTO)) */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--ancho-recuadro-personalizado));
+  grid-auto-rows: var(--incremento-fila-personalizado);
+  justify-content: center;
+
+}
+.base-cuadro-irregular,
+app-tabla-generica .base-cuadro-irregular  {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 5px 5px;
+  border-radius: var(--border-radius-recuadro);
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  word-wrap: break-word;
+  box-shadow: 7px 7px 16px rgba(138, 138, 138, 0.301);
+}
+.centrar-todo {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.centrar-verticalmente {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  display:flex;
+  align-items: center;
+}
+.recuadro-chico {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  grid-row-end: span var(--recuadro-chico);
+  grid-column-end: span var(--colspan);
+}
+.recuadro-mediano{
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  grid-row-end: span var(--recuadro-mediano);
+  grid-column-end: span var(--colspan);
+}
+.recuadro-grande {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  grid-row-end: span var(--recuadro-grande);
+  grid-column-end: span var(--colspan);
+}
+.recuadro-personalizado {
+  transition: 
+    grid-template-columns 350ms,
+    grid-auto-rows 350ms,
+    grid-row-end 350ms,
+    grid-column-end 350ms;
+  grid-row-end: span var(--recuadro-personalizado);
+  grid-column-end: span var(--colspan);
+}
+
   
 
-  .botlab.xl {
-    font-size: 32px;
-  }
-  .botlab.lg {
-    font-size: 25px;
-  }
-  .botlab.md {
-    font-size: 19px;
-  }
-  .botlab.sm {
-    font-size: 10px;
-  }
-  .botlab {
-    transition: all 350ms;
-    font-size: 14px;
-    border: transparent;
+@property --inicialLlenadoBotella {
+  syntax: '<color>';
+  initial-value: rgb(255, 255, 255);
+  inherits: false;
+}
+@property --finalLlenadoBotella {
+  syntax: '<color>';
+  initial-value: rgb(255, 255, 255);
+  inherits: false;
+}
+@property --porcentajeLlenadoBotella {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false;
+}
+@property --porcentajeLlenadoBotellaFinal {
+  syntax: '<length-percentage>';
+  initial-value: 0%;
+  inherits: false;
+}
+
+.llenado-botella {
+  transition: 
+    --inicialLlenadoBotella 350ms ease-in-out, 
+    --finalLlenadoBotella 350ms ease-in-out,
+    --porcentajeLlenadoBotella 300ms ease-in-out,
+    --porcentajeLlenadoBotellaFinal 350ms ease-in-out;
+  background-image: linear-gradient(
+    to top,
+    var(--inicialLlenadoBotella) 
+      var(--porcentajeLlenadoBotella), 
+    var(--finalLlenadoBotella) 
+      var(--porcentajeLlenadoBotellaFinal)
+  );
+  --inicialLlenadoBotella: rgba(46, 144, 144, 0.288);
+  --finalLlenadoBotella: rgba(52, 114, 114, 0);
+  --porcentajeLlenadoBotella: var(--llenado, 0%);
+  --porcentajeLlenadoBotellaFinal: var(--llenado, 0%);
+}
+
+
+/* (o-----------------------------------------( BOTONES Y TEXTO)) */
+
+:root {
+  --color-enfasis-boton: gray;
+  --color-enfasis-texto-boton: black;
+  --color-enfasis-texto: black;
+}
+
+@property --inical-effecto-onda {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+@property --final-efecto-odna {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+@property --porcentaje-onda {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: false;
+}
+
+.botlab.xl,
+.botlab-line.xl {
+  font-size: 32px;
+}
+.botlab.lg,
+.botlab-line.lg {
+  font-size: 25px;
+}
+.botlab.md,
+.botlab-line.md {
+  font-size: 19px;
+}
+.botlab.sm,
+.botlab-line.sm {
+  font-size: 10px;
+}
+.botlab,
+.botlab-line {
+  transition:
+    all 350ms,
+    font-size 350ms,
+    border 350ms,
+    color 350ms,
+    border-radius 350ms,
+    padding 350ms,
+    overflow 350ms;
+  font-size: 14px;
+  background-color: var(--color-enfasis-boton);
+  color: var(--color-enfasis-texto-boton);
+  border: 1px solid var(--color-enfasis-boton);
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+  --porcentaje-onda: 0%;
+  --inical-effecto-onda: var(--color-enfasis-boton);
+  --final-efecto-odna: transparent;
+  background-image: radial-gradient(
+    circle, 
+    var(--inical-effecto-onda) var(--porcentaje-onda), 
+    var(--final-efecto-odna)   var(--porcentaje-onda)
+  );
+}
+.botlab:hover {
+  transition:
+    all 350ms,
+    --inical-effecto-onda 350ms,
+    --final-efecto-odna 350ms,
+    --porcentaje-onda 250ms,
+    font-size 350ms,
+    border 350ms,
+    color 350ms,
+    border-radius 350ms,
+    padding 350ms,
+    overflow 350ms;
+  background-color: var(--color-enfasis-texto-boton);
+  color: var(--color-enfasis-boton);
+  border: 1px solid var(--color-enfasis-texto-boton);
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+  --porcentaje-onda: 0%;
+  --inical-effecto-onda: var(--color-enfasis-boton);
+  --final-efecto-odna: transparent;
+  background-image: radial-gradient(
+    circle, 
+    var(--inical-effecto-onda) var(--porcentaje-onda), 
+    var(--final-efecto-odna)   var(--porcentaje-onda)
+  );
+}
+.botlab:focus {
+  transition:
+    all 350ms,
+    --inical-effecto-onda 750ms,
+    --final-efecto-odna 750ms,
+    --porcentaje-onda 550ms,
+    font-size 350ms,
+    border 350ms,
+    color 350ms,
+    border-radius 350ms,
+    padding 350ms,
+    overflow 350ms;
+  background-color: var(--color-enfasis-texto-boton);
+  color: var(--color-enfasis-boton);
+  border: 1px solid var(--color-enfasis-texto-boton);
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+  --inical-effecto-onda: transparent;
+  --final-efecto-odna: transparent;
+  --porcentaje-onda: 100%;
+}
+.botlab-line {
+  transition:
+    all 350ms,
+    font-size 350ms,
+    border 350ms,
+    color 350ms,
+    border-radius 350ms,
+    padding 350ms,
+    overflow 350ms;
+  font-size: 14px;
+  background-color: transparent;
+  color: var(--color-enfasis-boton);
+  border: 1px solid var(--color-enfasis-boton);
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+  --porcentaje-onda: 0%;
+  --inical-effecto-onda: var(--color-enfasis-boton);
+  --final-efecto-odna: transparent;
+  background-image: radial-gradient(
+    circle, 
+    var(--inical-effecto-onda) var(--porcentaje-onda), 
+    var(--final-efecto-odna)   var(--porcentaje-onda)
+  );
+}
+.botlab-line:hover {
+  transition:
+    all 350ms,
+    --inical-effecto-onda 350ms,
+    --final-efecto-odna 350ms,
+    --porcentaje-onda 250ms,
+    font-size 350ms,
+    border 350ms,
+    color 350ms,
+    border-radius 350ms,
+    padding 350ms,
+    overflow 350ms;
+  background-color: var(--color-enfasis-boton);
+  color: var(--color-enfasis-texto-boton);
+  border: 1px solid var(--color-enfasis-boton);
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+  --porcentaje-onda: 0%;
+  --inical-effecto-onda: var(--color-enfasis-texto-boton);
+  --final-efecto-odna: transparent;
+  background-image: radial-gradient(
+    circle, 
+    var(--inical-effecto-onda) var(--porcentaje-onda), 
+    var(--final-efecto-odna)   var(--porcentaje-onda)
+  );
+}
+.botlab-line:focus {
+  transition:
+    all 350ms,
+    --inical-effecto-onda 750ms,
+    --final-efecto-odna 750ms,
+    --porcentaje-onda 550ms,
+    font-size 350ms,
+    border 350ms,
+    color 350ms,
+    border-radius 350ms,
+    padding 350ms,
+    overflow 350ms;
     background-color: var(--color-enfasis-boton);
-    color: var(--color-enfasis-texto-boton);
-    border-radius: 10px;
-    padding: 6px;
-  }
-  .botlab:hover {
-    /* border-color: var(--color-enfases-texto-boton);
-    border: 10px; */
-    transition: all 350ms;
-    background-color: var(--color-enfasis-texto-boton);
-    color: var(--color-enfasis-boton);
-    border-radius: 10px;
-    padding: 6px;
-  }
-
-  .texto {
-    color: var(--color-enfasis-texto);
-  }
+    color:var(--color-enfasis-texto-boton);
+    border: 1px solid var(--color-enfasis-boton);
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+  --inical-effecto-onda: transparent;
+  --final-efecto-odna: transparent;
+  --porcentaje-onda: 100%;
+}
 
 
-  .primario {
-    --color-enfasis-boton: rgb(41, 41, 41);
-    --color-enfasis-texto-boton: rgb(255, 217, 114);
-    --color-enfasis-texto: rgb(161, 138, 74);
-  }
-  .secundario {
-    --color-enfasis-boton: rgb(58, 58, 58);
-    --color-enfasis-texto-boton: rgb(194, 194, 194);
-    --color-enfasis-texto: rgb(58, 58, 58);
-  }
-  .correcto {
-    --color-enfasis-boton: rgb(147, 255, 114);
-    --color-enfasis-texto-boton: rgb(37, 37, 37);
-    --color-enfasis-texto: rgb(84, 161, 74);
-  }
-  .error {
-    --color-enfasis-boton: rgb(255, 114, 114);
-    --color-enfasis-texto-boton: rgb(255, 255, 255);
-    --color-enfasis-texto: rgb(161, 74, 74);
-  }
-  .advertencia {
-    --color-enfasis-boton: rgb(255, 157, 77);
-    --color-enfasis-texto-boton: rgb(255, 255, 255);
-    --color-enfasis-texto: rgb(192, 128, 67);
-  }
-  .info {
-    --color-enfasis-boton: rgb(114, 210, 255);
-    --color-enfasis-texto-boton: rgb(37, 37, 37);
-    --color-enfasis-texto: rgb(74, 151, 161);
-  }
+.texto {
+  color: var(--color-enfasis-texto);
+}
+
+
+.primario {
+  --color-enfasis-boton: rgb(41, 41, 41);
+  --color-enfasis-texto-boton: rgb(255, 217, 114);
+  --color-enfasis-texto: rgb(161, 138, 74);
+}
+.secundario {
+  --color-enfasis-boton: rgb(58, 58, 58);
+  --color-enfasis-texto-boton: rgb(194, 194, 194);
+  --color-enfasis-texto: rgb(58, 58, 58);
+}
+.correcto {
+  --color-enfasis-boton: rgb(105, 199, 147);
+  --color-enfasis-texto-boton: rgb(37, 37, 37);
+  --color-enfasis-texto: rgb(105, 199, 147);
+}
+.error {
+  --color-enfasis-boton: rgb(255, 114, 114);
+  --color-enfasis-texto-boton: rgb(255, 255, 255);
+  --color-enfasis-texto: rgb(255, 114, 114);
+}
+.advertencia {
+  --color-enfasis-boton: rgb(255, 157, 77);
+  --color-enfasis-texto-boton: rgb(255, 255, 255);
+  --color-enfasis-texto: rgb(255, 157, 77);
+}
+.info {
+  --color-enfasis-boton: rgb(105, 192, 207);
+  --color-enfasis-texto-boton: rgb(37, 37, 37);
+  --color-enfasis-texto: rgb(105, 192, 207);
+}
 
 
 

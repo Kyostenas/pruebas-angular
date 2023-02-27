@@ -1,5 +1,26 @@
 <div class="marco-cuadros-irregulares">
-    <div class="base-cuadro-irregular recuadro-mediano" *ngFor="let clase of ['primario', 'secundario', 'correcto', 'error', 'advertencia', 'info']">
+    <ng-container *ngFor="let clase of [
+        'primario', 
+        'secundario', 
+        'correcto', 
+        'error', 
+        'advertencia', 
+        'info'
+    ]">
+         <button class="base-cuadro-irregular recuadro-chico botlab {{ clase }}">
+            <h1>
+                BOTÓN
+            </h1>
+         </button>
+    </ng-container>
+    <div class="base-cuadro-irregular recuadro-mediano" *ngFor="let clase of [
+            'primario', 
+            'secundario', 
+            'correcto', 
+            'error', 
+            'advertencia', 
+            'info'
+        ]">
         <button
             class="botlab sm {{ clase }}"
         >
@@ -13,7 +34,7 @@
         </button>
         <br>
         <button
-            class="botlab md {{ clase }}"
+            class="botlab  md {{ clase }}"
         >
             BOTÓN
         </button>
@@ -26,6 +47,64 @@
         <br>
         <button
             class="botlab xl {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <p>
+            <span class="texto {{ clase }}">
+                ESTE ES UN EJEMPLO DE TEXTO PARA VER ESTE COLOR
+            </span>
+        </p>
+    </div>
+    <ng-container *ngFor="let clase of [
+            'primario', 
+            'secundario', 
+            'correcto', 
+            'error', 
+            'advertencia', 
+            'info'
+    ]">
+         <button class="base-cuadro-irregular recuadro-chico botlab-line {{ clase }}">
+            <h1>
+                BOTÓN
+            </h1>
+         </button>
+    </ng-container>
+    <div class="base-cuadro-irregular recuadro-mediano" *ngFor="let clase of [
+            'primario', 
+            'secundario', 
+            'correcto', 
+            'error', 
+            'advertencia', 
+            'info'
+        ]">
+        <button
+            class="botlab-line sm {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab-line {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab-line  md {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab-line lg {{ clase }}"
+        >
+            BOTÓN
+        </button>
+        <br>
+        <button
+            class="botlab-line xl {{ clase }}"
         >
             BOTÓN
         </button>
